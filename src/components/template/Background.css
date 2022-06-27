@@ -1,0 +1,12 @@
+img.bg-photo {
+    opacity: 0.4;
+}
+
+section.bg {
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    background: rgb(166, 172, 199);
+    width: 100%;
+    position: absolute;
+}
