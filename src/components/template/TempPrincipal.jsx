@@ -1,8 +1,8 @@
 import React from 'react';
 import './TempPrincipal.css';
 
-import LoginTemplate from './LoginTemplate';
-import RecoverPassTemplate from './RecoverPassTemplate';
+// import LoginTemplate from './LoginTemplate';
+// import RecoverPassTemplate from './RecoverPassTemplate';
 
 import RegistrationTemplate from './RegistrationTemplate';
 
@@ -18,7 +18,7 @@ export default class TemplatePrincipal extends React.Component {
 
     handleClick(event) {
         event.preventDefault();
-        if (this.state.active == false)
+        if (this.state.active === false)
             this.setState({ active: true })
     }
 
@@ -26,8 +26,6 @@ export default class TemplatePrincipal extends React.Component {
         return (
             <React.Fragment>
                 {
-
-
                     this.state.active ?
                         <RegistrationTemplate />
                         :

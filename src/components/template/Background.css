@@ -1,9 +1,10 @@
 img.bg-photo {
     opacity: 0.4;
+    background-size: contain;
+    height: 100vh;
 }
 
 section.bg {
-    display: flex;
     overflow: hidden;
     height: 100%;
     background: rgb(166, 172, 199);
