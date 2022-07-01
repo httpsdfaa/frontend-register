@@ -2,11 +2,11 @@ span.cardVisit {
     color: var(--color-default);
 }
 
-section.registrationName {
+section.registrationName, section.registrationEmail, section.registrationPass {
     height: 100%;
 }
 
-div.registrationName{
+div.registrationName, div.registrationEmail, div.registrationPass {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,7 +16,7 @@ div.registrationName{
     overflow: hidden;
 }
 
-div.nameInput {
+.nameInput {
     display: flex;
     flex-direction: column;
     padding: 40px 0;
@@ -28,7 +28,7 @@ h2 {
     color: black;
 }
 
-div.nameInput input {
+.nameInput input {
     height: 45px;
     min-width: 260px;
     border: none;
@@ -36,9 +36,7 @@ div.nameInput input {
     padding: 0 15px;
 }
 
-
-
-div.nameInput input:focus {
+.nameInput input:focus {
     border: 1px solid rgb(116, 125, 252);
     box-shadow: 1px 0 0 0 rgb(50, 61, 221);
     outline: none;
@@ -57,7 +55,7 @@ div.button button {
 }
 
 @media only screen and (min-width: 560px){
-    div.registrationName {
+    div.registrationName, div.registrationEmail, div.registrationPass {
         background: #fff;
         height: 98%;
         width: 400px;
@@ -65,13 +63,13 @@ div.button button {
         margin: 0 30px;
     }
 
-    section.registrationName {
+    section.registrationName, section.registrationEmail, section.registrationPass {
         display: flex;
         justify-content: flex-end;
         align-items: center;
     }
 
-    div.nameInput input {
+    .nameInput input {
         background: rgb(226, 226, 226);
     }
 }
