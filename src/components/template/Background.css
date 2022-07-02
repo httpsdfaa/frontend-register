@@ -1,12 +1,14 @@
 section.bg img {
     width: 100%;
     height: 100%;
+    z-index: 5;
 }
 
 section.bg {
     position: absolute;
     width: 100%;
     overflow: hidden;
+    z-index: 1;
 }
 
 @media (min-width: 1186px) {

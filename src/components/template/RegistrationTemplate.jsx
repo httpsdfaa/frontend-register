@@ -1,5 +1,7 @@
 import React from 'react';
 import './RegistrationTemplate.css';
+import './index.css'
+import { Link } from 'react-router-dom';
 
 export default class Registration extends React.Component {
 
@@ -12,6 +14,7 @@ export default class Registration extends React.Component {
                             Novo por aqui? Crie uma conta gratuitamente com a gente
                         </span>
                         <h2>Digite seu nome e sobrenome</h2>
+                        <Link to="/login"><span className='loginAccount'>Faça login aqui</span></Link>
                         <div className="nameInput">
                             <input type="text" placeholder='Nome' />
                             <input type="text" placeholder='Sobrenome' />

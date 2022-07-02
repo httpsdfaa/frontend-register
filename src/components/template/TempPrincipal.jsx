@@ -1,5 +1,6 @@
 import React from 'react';
 import './TempPrincipal.css';
+import { Link } from 'react-router-dom';
 
 export default class TemplatePrincipal extends React.Component {
 
@@ -8,8 +9,8 @@ export default class TemplatePrincipal extends React.Component {
             <React.Fragment>
                 <section className="principal">
                     <div className="principal">
-                        <button onClick={this.handleClickRegistration} type="button" className="register">Cadastre-se</button>
-                        <button type="button" className="login">Login</button>
+                        <Link to='/inscreva-se'><button type="button" className="register">Cadastre-se</button></Link>
+                        <Link to='/login'><button type="button" className="login">Login</button></Link>
                     </div>
                 </section>
             </React.Fragment>

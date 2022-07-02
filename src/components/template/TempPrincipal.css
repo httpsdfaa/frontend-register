@@ -23,4 +23,5 @@ div.principal button {
     color: #fff;
     font-family: var(--font-default-family);
     width: 100px;
+    cursor: pointer;
 }

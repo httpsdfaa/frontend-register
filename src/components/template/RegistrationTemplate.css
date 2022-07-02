@@ -1,73 +1,13 @@
-section.registrationName {
-    padding: 0 20px;
-    position: relative;
-    display: flex;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--font-default-family);
-}
-
-h2 {
-    font-weight: 300;
-}
-
 span.cardVisit {
     color: rgb(140, 31, 176);
 }
 
-div.registrationName {
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 9px 0px #1b0d5233;
+div.registrationName span.loginAccount{
+    font-size: 14px;
+    color: rgb(0, 105, 197);
+    cursor: pointer;
 }
 
-div.nameInput {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    padding-bottom: 20px;
-}
-
-input:focus {
-    border: 1px solid rgba(52, 113, 255, 0.8);
-    border-left: 2px solid rgb(66, 66, 66);
-}
-
-div.nameInput input {
-    background: rgb(222, 222, 222);
-    height: 40px;
-    padding: 0 12px;
-}
-
-div.button button {
-    background: var(--bg-btn);
-    height: 40px;
-    width: 100px;
-    font-family: var(--font-default-family);
-    color: #fff;
-}
-
-div.button button, div.nameInput input {
-    border-radius: 8px;
-}
-
-div.button {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    
-}
-
-div.button button:hover {
-    background-color: #7243ab;
-    border: 1px solid #422665;
-}
-
-@media (min-width: 1186px) {
-    section.registrationName {
-        justify-content: flex-end;
-    }
+div.registrationName div.nameInput {
+    padding: 30px 0;
 }

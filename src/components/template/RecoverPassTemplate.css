@@ -1,0 +1,10 @@
+div.recoverPass span.createAccount {
+    font-size: 14px;
+    color: rgb(0, 105, 197);
+    cursor: pointer;
+}
+
+div.recoverPass div.nameInput {
+    padding: 30px 0;
+}
+

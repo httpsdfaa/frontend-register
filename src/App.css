@@ -37,3 +37,7 @@ button {
     background: none;
     border: none;
 }
+
+a {
+    text-decoration: none;
+}
