@@ -1,81 +1,73 @@
-span.cardVisit {
-    color: var(--color-default);
-}
-
-section.registrationName, section.registrationEmail, section.registrationPass {
-    height: 100%;
-}
-
-div.registrationName, div.registrationEmail, div.registrationPass {
+section.registrationName {
+    padding: 0 20px;
+    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
+    min-height: 100vh;
     justify-content: center;
-    padding: 0 30px;
-    overflow: hidden;
-}
-
-.nameInput {
-    display: flex;
-    flex-direction: column;
-    padding: 40px 0;
-    gap: 25px;
+    align-items: center;
+    font-family: var(--font-default-family);
 }
 
 h2 {
     font-weight: 300;
-    color: black;
 }
 
-.nameInput input {
-    height: 45px;
-    min-width: 260px;
-    border: none;
-    border-radius: var(--border-radius-btn);
-    padding: 0 15px;
+span.cardVisit {
+    color: rgb(140, 31, 176);
 }
 
-.nameInput input:focus {
-    border: 1px solid rgb(116, 125, 252);
-    box-shadow: 1px 0 0 0 rgb(50, 61, 221);
-    outline: none;
+div.registrationName {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 9px 0px #1b0d5233;
+}
+
+div.nameInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+input:focus {
+    border: 1px solid rgba(52, 113, 255, 0.8);
+    border-left: 2px solid rgb(66, 66, 66);
+}
+
+div.nameInput input {
+    background: rgb(222, 222, 222);
+    height: 40px;
+    padding: 0 12px;
 }
 
 div.button button {
-    background: var(--color-default);
-    border: none;
-    border-radius: var(--border-radius-btn);
-    color: #fff;
+    background: var(--bg-btn);
     height: 40px;
-    width: 120px;
+    width: 100px;
     font-family: var(--font-default-family);
-    margin: 0 5px;
-    cursor: pointer;
+    color: #fff;
 }
 
-@media only screen and (min-width: 560px){
-    div.registrationName, div.registrationEmail, div.registrationPass {
-        background: #fff;
-        height: 98%;
-        width: 400px;
-        border-radius: var(--border-radius-btn);
-        margin: 0 30px;
-    }
+div.button button, div.nameInput input {
+    border-radius: 8px;
+}
 
-    section.registrationName, section.registrationEmail, section.registrationPass {
-        display: flex;
+div.button {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+
+div.button button:hover {
+    background-color: #7243ab;
+    border: 1px solid #422665;
+}
+
+@media (min-width: 1186px) {
+    section.registrationName {
         justify-content: flex-end;
-        align-items: center;
-    }
-
-    .nameInput input {
-        background: rgb(226, 226, 226);
-    }
-}
-
-@media only screen and (max-height: 372px) {
-    span.cardVisit {
-        display: none;
     }
 }

@@ -1,12 +1,5 @@
 import React from 'react';
 import './TempPrincipal.css';
-import { Link } from 'react-router-dom';
-
-import LoginTemplate from './LoginTemplate';
-
-import RegistrationTemplate from './RegistrationTemplate';
-
-
 
 export default class TemplatePrincipal extends React.Component {
 

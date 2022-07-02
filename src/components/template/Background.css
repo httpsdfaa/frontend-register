@@ -1,13 +1,17 @@
-img.bg-photo {
-    opacity: 0.4;
-    background-size: contain;
-    height: 100vh;
+section.bg img {
+    width: 100%;
+    height: 100%;
 }
 
 section.bg {
-    overflow: hidden;
-    height: 100%;
-    background: rgb(166, 172, 199);
-    width: 100%;
     position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+
+@media (min-width: 1186px) {
+    section.bg img {
+        background-position: center center;
+        background-size: cover;
+    }
 }

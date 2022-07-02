@@ -1,12 +1,12 @@
 import './App.css';
-import Main from './components/template/Main';
 import Background from './components/template/Backgrond';
+import Registration from './components/template/RegistrationTemplate';
 
 function App() {
   return (
     <div className="App">
       <Background />
-      <Main />
+      <Registration />
     </div>
   );
 }
