@@ -9,6 +9,11 @@ section.registrationName, section.login, section.recoverPass {
     z-index: 2;
 }
 
+div.error{
+    height: 30px;
+    color: red;
+}
+
 h2 {
     font-weight: 300;
 }

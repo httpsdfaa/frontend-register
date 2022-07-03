@@ -6,6 +6,7 @@ section.principal {
     height: 100vh;
     position: absolute;
     top: 0;
+    z-index: 3;
 }
 
 div.principal {
