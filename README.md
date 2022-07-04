@@ -7,6 +7,7 @@ Controle de acesso usando ReactJS. O projeto está sendo desenvolvido com foco n
 - React
 - JavaScript
 - React Router
+- axios
 
-## Link site
+## Link site 
 Em breve uma prévia do projeto
