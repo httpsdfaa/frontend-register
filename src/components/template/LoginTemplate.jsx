@@ -37,7 +37,7 @@ export default class LoginTemplate extends React.Component {
 
         const email = this.state.valueEMAIL
         const pass = this.state.valuePASS
-        
+
         if (email === '' || pass === '') {
             this.setState({ errorRequired: true })
 
@@ -52,7 +52,7 @@ export default class LoginTemplate extends React.Component {
             <section className="login">
                 <div className="login">
                     <h2>Entre em sua conta</h2>
-                    <Link to="/inscreva-se"><span className="createAccount">Não possui uma conta?</span></Link>
+                    <Link to="/inscreva-se">Não possui uma conta?</Link>
                     <form onSubmit={this.handleSubmit}>
                         <div className="nameInput">
                             <input type="email" placeholder='*Email'
@@ -68,15 +68,16 @@ export default class LoginTemplate extends React.Component {
                                     <ErrorRequired />
                                     : null
                             }
-
                             {/* <ErrorAuth /> */}
                         </div>
-                        <Link to="/recover"><span className='forgotAccount'>Esqueceu sua senha?</span></Link>
+                        <Link to="/recover">Esqueceu sua senha?</Link>
                         <div className="button">
-                            <button type="submit" className="nameButton" id="cancel">Cancelar</button>
                             <button className="nameButton" id="done">Pronto</button>
                         </div>
                     </form>
+                    <div className="button">
+                        <Link to="/" ><button className="nameButton" id="cancel">Cancelar</button></Link>
+                    </div>
                 </div>
             </section>
         )
