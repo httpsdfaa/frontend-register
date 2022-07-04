@@ -2,7 +2,8 @@ import React from 'react';
 import './RegistrationTemplate.css';
 import './index.css'
 import { Link } from 'react-router-dom';
-import { ErrorRequired } from '../Constants'
+import { ErrorRequired } from '../Constants';
+const axiosApi = require('../../api/axios.js').default
 
 export default class Registration extends React.Component {
     constructor(props) {
@@ -27,31 +28,36 @@ export default class Registration extends React.Component {
 
     handleChangeName(event) {
         this.setState({
-            valueNAME: event.target.value
+            valueNAME: event.target.value,
+            errorRequired: false
         })
     }
 
     handleChangeSurname(event) {
         this.setState({
-            valueSURNAME: event.target.value
+            valueSURNAME: event.target.value,
+            errorRequired: false
         })
     }
 
     handleChangeEmail(event) {
         this.setState({
-            valueEMAIL: event.target.value
+            valueEMAIL: event.target.value,
+            errorRequired: false
         })
     }
 
     handleChangePass(event) {
         this.setState({
-            valuePASS: event.target.value
+            valuePASS: event.target.value,
+            errorRequired: false
         })
     }
 
     handleChangePass_Again(event) {
         this.setState({
-            valuePASS_AGAIN: event.target.value
+            valuePASS_AGAIN: event.target.value,
+            errorRequired: false
         })
     }
 
@@ -72,6 +78,13 @@ export default class Registration extends React.Component {
                 })
             }, 5000);
 
+        } else {
+            axiosApi(
+                inputNAME,
+                inputSURNAME,
+                inputEMAIL,
+                inputPASS
+            )
         }
     }
 
@@ -84,7 +97,7 @@ export default class Registration extends React.Component {
                             Novo por aqui? Crie uma conta gratuitamente com a gente
                         </span>
                         <h2>Digite seu nome e sobrenome</h2>
-                        <Link to="/login"><span className='loginAccount'>Faça login aqui</span></Link>
+                        <Link to="/login">Faça login aqui</Link>
                         <form onSubmit={this.handleSubmit}>
                             <div className="nameInput">
                                 <input type="text" placeholder='*Nome'
@@ -111,10 +124,12 @@ export default class Registration extends React.Component {
                                 }
                             </div>
                             <div className="button">
-                                <button className="nameButton" id="cancel">Cancelar</button>
-                                <button className="nameButton" id="done" >Pronto</button>
+                                <button type="submit" className="nameButton" id="done">Pronto</button>
                             </div>
                         </form>
+                        <div className="button">
+                            <Link to="/"><button type="submit" className="nameButton" id="cancel">Cancelar</button></Link>
+                        </div>
                     </div>
                 </section>
             </React.Fragment>
