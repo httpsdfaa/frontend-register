@@ -50,6 +50,7 @@ div.button button {
     width: 100px;
     font-family: var(--font-default-family);
     color: #fff;
+    margin-bottom: 10px;
 }
 
 div.button button, div.nameInput input {
@@ -60,7 +61,7 @@ div.button {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    
+    margin: 10px 0;
 }
 
 div.button button:hover {

@@ -1,13 +1,3 @@
 div.login div.nameInput {
     padding-top: 30px;
 }
-
-div.login div.button{
-    padding-top: 30px;
-}
-
-span {
-    font-size: 14px;
-    color: rgb(0, 105, 197);
-    cursor: pointer;
-}
