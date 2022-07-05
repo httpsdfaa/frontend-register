@@ -21,7 +21,7 @@ export default class Registration extends React.Component {
         this.handleChangeSurname = this.handleChangeSurname.bind(this);
         this.handleChangeEmail = this.handleChangeEmail.bind(this);
         this.handleChangePass = this.handleChangePass.bind(this);
-        this.handleChangePass_Again = this.handleChangePass_Again.bind(this);
+        this.handleChangePASS_AGAIN = this.handleChangePASS_AGAIN.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -54,7 +54,7 @@ export default class Registration extends React.Component {
         })
     }
 
-    handleChangePass_Again(event) {
+    handleChangePASS_AGAIN(event) {
         this.setState({
             valuePASS_AGAIN: event.target.value,
             errorRequired: false
@@ -63,13 +63,13 @@ export default class Registration extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const inputNAME = this.state.valueNAME
-        const inputSURNAME = this.state.valueSURNAME
-        const inputEMAIL = this.state.valueEMAIL
-        const inputPASS = this.state.valuePASS
-        const inputPASS_AGAIN = this.state.valuePASS_AGAIN
+        const firstName = this.state.valueNAME
+        const surname = this.state.valueSURNAME
+        const email = this.state.valueEMAIL
+        const pass = this.state.valuePASS
+        const passAGAIN = this.state.valuePASS_AGAIN
 
-        if (inputNAME === '' || inputSURNAME === '' || inputEMAIL === '' || inputPASS === '' || inputPASS_AGAIN === '') {
+        if (firstName === '' || surname === '' || email === '' || pass === '' || passAGAIN === '') {
             this.setState({ errorRequired: true })
 
             setTimeout(() => {
@@ -80,10 +80,10 @@ export default class Registration extends React.Component {
 
         } else {
             axiosApi(
-                inputNAME,
-                inputSURNAME,
-                inputEMAIL,
-                inputPASS
+                firstName,
+                surname,
+                email,
+                pass
             )
         }
     }
@@ -113,8 +113,8 @@ export default class Registration extends React.Component {
                                     value={this.state.valuePASS}
                                     onChange={this.handleChangePass} />
                                 <input type="password" placeholder='*Digite novamente'
-                                    value={this.state.valuePASS_AGAIN}
-                                    onChange={this.handleChangePass_Again} />
+                                    value={this.state.valuepassAGAIN}
+                                    onChange={this.handleChangepassAGAIN} />
                             </div>
                             <div className="error">
                                 {
