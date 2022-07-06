@@ -113,8 +113,8 @@ export default class Registration extends React.Component {
                                     value={this.state.valuePASS}
                                     onChange={this.handleChangePass} />
                                 <input type="password" placeholder='*Digite novamente'
-                                    value={this.state.valuepassAGAIN}
-                                    onChange={this.handleChangepassAGAIN} />
+                                    value={this.state.valuePASS_AGAIN}
+                                    onChange={this.handleChangePASS_AGAIN} />
                             </div>
                             <div className="error">
                                 {
