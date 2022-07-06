@@ -3,7 +3,8 @@ import './RegistrationTemplate.css';
 import './index.css'
 import { Link } from 'react-router-dom';
 import { ErrorRequired } from '../Constants';
-const axiosApi = require('../../api/axios.js').default
+// import { URL } from '../../config';
+import { AXIOS_POST } from '../../api/axios'
 
 export default class Registration extends React.Component {
     constructor(props) {
@@ -79,7 +80,7 @@ export default class Registration extends React.Component {
             }, 5000);
 
         } else {
-            axiosApi(
+            AXIOS_POST.register(
                 firstName,
                 surname,
                 email,

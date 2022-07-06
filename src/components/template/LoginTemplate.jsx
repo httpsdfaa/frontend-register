@@ -2,7 +2,8 @@ import React from 'react';
 import './LoginTemplate.css';
 import './index.css'
 import { Link } from 'react-router-dom';
-import { ErrorRequired } from '../Constants'
+import { ErrorRequired } from '../Constants';
+import { AXIOS_POST } from '../../api/axios';
 
 export default class LoginTemplate extends React.Component {
     constructor(props) {
@@ -44,8 +45,13 @@ export default class LoginTemplate extends React.Component {
             setTimeout(() => {
                 this.setState({ errorRequired: false })
             }, 5000)
+        } else {
+            AXIOS_POST.login(
+                email,
+                pass
+            )
         }
-    }
+    } 
 
     render() {
         return (
