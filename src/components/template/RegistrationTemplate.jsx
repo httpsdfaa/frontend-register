@@ -3,8 +3,8 @@ import './RegistrationTemplate.css';
 import './index.css'
 import { Link } from 'react-router-dom';
 import { ErrorRequired } from '../Constants';
-// import { URL } from '../../config';
-import { AXIOS_POST } from '../../api/axios'
+import { URL } from '../../config';
+import axios from 'axios';
 
 export default class Registration extends React.Component {
     constructor(props) {
@@ -80,12 +80,20 @@ export default class Registration extends React.Component {
             }, 5000);
 
         } else {
-            AXIOS_POST.register(
-                firstName,
-                surname,
-                email,
-                pass
-            )
+            axios.post(URL.dev_register, {
+                data: {
+                    firstName: firstName,
+                    surname: surname,
+                    email: email,
+                    pass: pass
+                }
+            })
+                .then(function (response) {
+                    console.log(response)
+                })
+                .catch(function (error) {
+                    console.log(error)
+                })
         }
     }
 

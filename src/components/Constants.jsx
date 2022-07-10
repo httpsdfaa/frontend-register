@@ -12,7 +12,7 @@ export function ErrorRequired(){
 export function ErrorAuth(){
     return(
         <section className="errorAuth">
-            <span>Email ou senha incorreto</span>
+            <span>email ou senha incorreto</span>
         </section>
     )
 }

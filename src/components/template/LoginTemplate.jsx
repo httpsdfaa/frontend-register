@@ -2,8 +2,9 @@ import React from 'react';
 import './LoginTemplate.css';
 import './index.css'
 import { Link } from 'react-router-dom';
-import { ErrorRequired } from '../Constants';
-import { AXIOS_POST } from '../../api/axios';
+import { ErrorRequired, ErrorAuth } from '../Constants';
+import axios from 'axios';
+import { URL } from '../../config';
 
 export default class LoginTemplate extends React.Component {
     constructor(props) {
@@ -11,7 +12,8 @@ export default class LoginTemplate extends React.Component {
         this.state = {
             valueEMAIL: '',
             valuePASS: '',
-            errorRequired: false
+            errorRequired: false,
+            errorAuth401: false
         }
 
         this.handleChangeEmail = this.handleChangeEmail.bind(this);
@@ -45,13 +47,23 @@ export default class LoginTemplate extends React.Component {
             setTimeout(() => {
                 this.setState({ errorRequired: false })
             }, 5000)
+
         } else {
-            AXIOS_POST.login(
-                email,
-                pass
-            )
+            axios.post(URL.dev_login, {
+                data: {
+                    email: email,
+                    pass: pass
+                }
+            })
+                .then(function (response) {
+                    console.log(response.status)
+                })
+                .catch(function (error) {
+                    console.log(error.message)
+                })
+
         }
-    } 
+    }
 
     render() {
         return (
@@ -74,7 +86,11 @@ export default class LoginTemplate extends React.Component {
                                     <ErrorRequired />
                                     : null
                             }
-                            {/* <ErrorAuth /> */}
+                            {
+                                this.state.error ?
+                                    <ErrorAuth />
+                                    : null
+                            }
                         </div>
                         <Link to="/recover">Esqueceu sua senha?</Link>
                         <div className="button">
