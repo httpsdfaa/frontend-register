@@ -11,5 +11,11 @@ Controle de acesso usando ReactJS. O projeto está sendo desenvolvido com foco n
 - React Router
 - axios
 
+## Características
+
+- Adicione um novo usuário
+- Faça login
+- Troca de senha
+
 ## Link site 
 Em breve uma prévia do projeto

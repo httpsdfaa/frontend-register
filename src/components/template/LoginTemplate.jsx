@@ -12,8 +12,7 @@ export default class LoginTemplate extends React.Component {
         this.state = {
             valueEMAIL: '',
             valuePASS: '',
-            errorRequired: false,
-            errorAuth401: false
+            errorRequired: false
         }
 
         this.handleChangeEmail = this.handleChangeEmail.bind(this);
@@ -49,6 +48,7 @@ export default class LoginTemplate extends React.Component {
             }, 5000)
 
         } else {
+
             axios.post(URL.dev_login, {
                 data: {
                     email: email,
@@ -59,9 +59,8 @@ export default class LoginTemplate extends React.Component {
                     console.log(response.status)
                 })
                 .catch(function (error) {
-                    console.log(error.message)
+                    console.error(error.message)
                 })
-
         }
     }
 
@@ -86,11 +85,11 @@ export default class LoginTemplate extends React.Component {
                                     <ErrorRequired />
                                     : null
                             }
-                            {
-                                this.state.error ?
+                            {/* {
+                                this.state. ?
                                     <ErrorAuth />
                                     : null
-                            }
+                            } */}
                         </div>
                         <Link to="/recover">Esqueceu sua senha?</Link>
                         <div className="button">
